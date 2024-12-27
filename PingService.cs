@@ -1,21 +1,25 @@
 ﻿using System;
-namespace Pinger{
+using System.Net.NetworkInformation;
+using System.Text;
+
+namespace Pinger
+{
     public class PingService
     {
-        public int Data { get; set; };
-        public byte[] Buffer { get; set; };
-        public string Address { get; set; };
-        public int Timeout { get; set; };
-        public Ping pingSender { get; set; };
-        public PingOptions pingOptions { get; set; };
+        public int Data { get; set; }
+        public byte[] Buffer { get; set; }
+        public string Address { get; set; }
+        public int Timeout { get; set; }
+        public Ping pingSender { get; set; }
+        public PingOptions pingOptions { get; set; }
 
         public PingService()//can modify the constructor to take in the address, timeout , data and buffer
         {
             pingSender = new Ping();
             pingOptions = new PingOptions();
             pingOptions.DontFragment = true;//Set the DontFragment option to true
-            Data = "Learning to code";//Data to send
-            Buffer = Encoding.ASCII.GetBytes(Data);//Convert data to byte array
+           
+            Buffer = Encoding.ASCII.GetBytes("Data");//Convert data to byte array
             Timeout = 120;//Convert data to byte array
             Address = "";//Your address goes here
         }

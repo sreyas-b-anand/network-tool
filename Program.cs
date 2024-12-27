@@ -1,5 +1,4 @@
-﻿namespace PingService
-{
+﻿using Pinger;
     class Program
     {
         static void Main(string[] args)
@@ -9,4 +8,3 @@
             Console.WriteLine(res);
         }
     }
-}
