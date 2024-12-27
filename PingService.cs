@@ -20,7 +20,7 @@ namespace Pinger
             pingOptions.DontFragment = true;//Set the DontFragment option to true
            
             Buffer = Encoding.ASCII.GetBytes("Data");//Convert data to byte array
-            Timeout = 120;//Convert data to byte array
+            Timeout = 120;//your timeout goes here
             Address = "";//Your address goes here
         }
         public bool sendPing()
