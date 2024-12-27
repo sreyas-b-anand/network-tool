@@ -1,18 +1,12 @@
-﻿using System.Net.NetworkInformation;
-using System.Text;
-
-Ping pingSender = new Ping();
-PingOptions pingOptions = new PingOptions();
-pingOptions.DontFragment = true;
-
-string data = "Learning to code";
-
-byte[] buffer = Encoding.ASCII.GetBytes(data);
-int timeout = 120;
-string address = "4.2.2.2";
-PingReply reply = pingSender.Send(address , timeout ,buffer ,pingOptions);
-if(reply.Status == IPStatus.Success)
+﻿namespace PingService
 {
-    Console.WriteLine($"Response : {reply.Status.ToString()}");
-    Console.WriteLine($"RoundTrip : {reply.RoundtripTime}");
-}   
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            PingService pingService = new PingService(); //you can modify your constructor to take in the address, timeout , data and buffer
+            var res = pingService.sendPing();
+            Console.WriteLine(res);
+        }
+    }
+}
