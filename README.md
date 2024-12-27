@@ -18,7 +18,7 @@ A simple tool built with C# to send ping requests to a specified IP address or h
 
 1. Clone this repository:  
    ```bash  
-   git clone https://github.com/sreyas-b-anand/network-tool.git  
+   git clone https://github.com/sreyas-b-anand/ping-request-sender.git  
 2. ```bash  
    cd ping-request-sender
 3. Open the project in your preferred C# IDE (e.g., Visual Studio).
